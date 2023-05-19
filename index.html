@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Health Assistant</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+  <!-- custom js file link  -->
+  <script src="js/script.js"></script>
+</head>
+
+<body>
+
+  <!-- header section starts  -->
+
+  <header class="header">
+    <div class="logo">
+
+      <img src="images/logo.png" alt="">
+      <h1>VHA</h1>
+
+    </div>
+
+    <nav class="navbar">
+      <ul>
+        <li>
+          <a data-aos="zoom-in-left" data-aos-delay="300" href="#Home">Home</a>
+        </li>
+        <li><a data-aos="zoom-in-left" data-aos-delay="450" href="#About">About</a>
+        </li>
+        <li><a data-aos="zoom-in-left" data-aos-delay="750" href="#Services">Services <span class="icon">
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </span></a>
+
+          <ul class="dropdown">
+            <li><a href="Health Updates/index.html">Health Updates</a></li>
+            <li><a href="Message Reminder/index.html">Medication Reminder</a></li>
+            <li><a href="#">Latest Vaccine</a></li>
+
+          </ul>
+        </li>
+        <li><a data-aos="zoom-in-left" data-aos-delay="900" href="Doctors_info/index.html">Doctors</a>
+        </li>
+        <!--<a data-aos="zoom-in-left" data-aos-delay="1150" href="#blogs">Blogs</a>-->
+        <button class="btnLogin-popup" href="login for db/index.html">Login</button>
+      </ul>
+    </nav>
+
+
+    <div class="btnlogin">
+
+      <!-- 
+      <a data-aos="zoom-in-left" data-aos-delay="1300" href="#" class="btnLogin-popup">Log In</a>
+      <a data-aos="zoom-in-left" data-aos-delay="1300" href="#Get started" class="btn2">Get Started</a>-->
+
+    </div>
+
+  </header>
+
+
+
+  <!--
+
+  <div class="loginpage">
+
+    <div class="wrapper">
+      <span class="icon-close">
+        <ion-icon name="close"></ion-icon>
+      </span>
+      <div class="form-box login">
+        <h2>LOGIN</h2>
+        <form action="#">
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="mail"></ion-icon>
+            </span>
+            <input type="text" required>
+            <label>Username</label>
+
+          </div>
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="lock-closed"></ion-icon>
+            </span>
+            <input type="password" required>
+            <label>Password</label>
+          </div>
+          <div class="remember-forgot">
+            <label><input type="checkbox"> Remember me</label>
+            <a href="#">Forgot Password?</a>
+          </div>
+          <button type="submit" class="btn">Login</button>
+          <div class="login-register">
+            <p>
+              Don't have an account? <a href="#" class="register-link">Register</a>
+            </p>
+          </div>
+        </form>
+
+      </div>
+
+      <div class="form-box register">
+        <h2>Registration</h2>
+        <form action="#">
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="person"></ion-icon>
+            </span>
+            <input type="text" required>
+            <label>Username</label>
+          </div>
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="mail"></ion-icon>
+            </span>
+            <input type="text" required>
+            <label>Email</label>
+
+          </div>
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="lock-closed"></ion-icon>
+            </span>
+            <input type="password" required>
+            <label>Password</label>
+          </div>
+          <div class="remember-forgot">
+            <label><input type="checkbox">  I agree to the terms & conditions</label>
+
+          </div>
+          <button type="submit" class="btn">Register</button>
+          <div class="login-register">
+            <p>
+              Already have an account? <a href="#" class="login-link">Login</a>
+            </p>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section>
+    <div class="bigbox" id="Home">
+      <div class="image">
+        <img src="images/mainbg.png" alt="">
+      </div>
+
+      <div id="greeting"></div>
+      <script>
+        var today = new Date();
+        var hourNow = today.getHours();
+        var greeting;
+
+        if (hourNow >= 12 && hourNow < 12) {
+          greeting = 'Good Morning';
+        } else if (hourNow >= 12 && hourNow < 16)
+          greeting = 'Good Afternoon';
+        else if (hourNow >= 16 && hourNow < 19) {
+          greeting = 'Good Afternoon';
+        } else if (hourNow >= 19 && hourNow < 24) {
+          greeting = 'Good Night';
+        } else {
+          greeting = "Good Morning";
+        }
+        var greetingElem = document.getElementById('greeting');
+        greetingElem.textContent = greeting;
+      </script>
+
+      <div id="slider">
+
+        <ul>
+          <li>
+            <div class="slider-container">
+              <p>"Investing in your own Health is the best Investment you will ever make."</p>
+            </div>
+          </li>
+
+          <li>
+            <div class="slider-container">
+              <p>"Take care of your body. It's the only place you have to live."</p>
+            </div>
+          </li>
+          <li>
+            <div class="slider-container">
+              <p>"Your body hears everything your mind says. Stay Positive."</p>
+            </div>
+          </li>
+
+          <li>
+            <div class="slider-container">
+              <p>"Fitness is not about being better than someone else. It's about being better than you used to be."</p>
+            </div>
+          </li>
+          <li>
+            <div class="slider-container">
+              <p>"If you don't make time for your health, you'll have to make time for your illness."</p>
+            </div>
+          </li>
+          <li>
+            <div class="slider-container">
+              <p>"Motivation is what gets you started. Habit is what keeps you going."</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="box2" id="About">
+      <div class="bg">
+        <img src="images/R.gif" alt="">
+      </div>
+      <h1>Revolutionizing Medication Management</h1>
+
+      <div class="paragraph-wrapper">
+      <p>Empowering healthcare professionals and patients alike, a virtual health assistant is an innovative and
+        intuitive
+        AI tool that is designed to provide comprehensive support for a wide range of healthcare-related tasks.</p>
+</div>
+<div class="paragraph-wrapper2">
+      <p>Virtual health assistants aim to enhance healthcare accessibility, convenience, and patient engagement. They
+        are not intended to replace professional medical advice or diagnosis but rather provide supplemental information
+        and support. It's important to consult with qualified healthcare professionals for personalized care and medical
+        guidance.</p>
+        </div>
+    </div>
+  </section>
+
+  <!--image slider start-->
+  <div class="box3">
+    <div class="w">
+      <h4>What</h4>
+    </div>
+    <div class="c">
+      <h4>can a Virtual Health Assistant do?</h4>
+    </div>
+    <div class="slider">
+      <div class="slides">
+        <!--radio buttons start-->
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <input type="radio" name="radio-btn" id="radio4">
+        <!--radio buttons end-->
+        <!--slide images start-->
+        <div class="slide first">
+          <img src="images/1.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="images/2.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="images/3.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="images/4.png" alt="">
+        </div>
+        <!--slide images end-->
+        <!--automatic navigation start-->
+        <div class="navigation-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
+        </div>
+        <!--automatic navigation end-->
+      </div>
+      <!--manual navigation start-->
+      <div class="navigation-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+      </div>
+      <!--manual navigation end-->
+    </div>
+    <!--image slider end-->
+  </div>
+
+
+  <section>
+    <div class="serv_section" id="Services">
+      <div class="services">
+        <h1>Services</h1>
+        <div class="content">As a personal medication coach, my job is to support you and help you manage your
+          medications
+          effectively. It is important to take your medication as prescribed and on time to ensure you get the most out
+          of
+          your treatment. I will help you create a medication plan or use a pill organizer to keep track of your
+          medication
+          and avoid missing doses.
+        </div>
+        <div class="img"><img src="images/beam-online-medical-consultation.gif" alt="">
+        </div>
+
+        <div class="box">
+          <h2>No More Missed Doses</h2>
+          <h3>Scan Now,</h3>
+          <div class="text">
+            to Help with medication management, remind a patient to take their medication on time.
+          </div>
+        </div>
+        <img src="images/Group 17.png" alt="">
+      </div>
+      
+    </div>
+  </section>
+
+  <!--
+    <div class="footer">
+      <div class="big"></div>
+    </div>
+    <div class="small">
+      <p>Created by Code Surfers| All rights reserved!</p>
+    </div>
+-->
+  <div class="foot">
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>Virtual Health Assitant</h4>
+            <ul>
+              <li><a href="#Home"><i class="fas fa-arrow-right"></i> Home </a></li>
+              <li><a href="#About"><i class="fas fa-arrow-right"></i> About</a></li>
+              <li><a href="#Services"><i class="fas fa-arrow-right"></i> Services</a></li>
+              <li><a href="#Doctors"><i class="fas fa-arrow-right"></i> Doctors</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Get Help</h4>
+            <ul>
+              <li><a href="#About"><i class="fas fa-arrow-right"></i> VHA?<a></li>
+              <li><a href="#"><i class="fas fa-arrow-right"></i> Why</a></li>
+              <li><a href="#Services"><i class="fas fa-arrow-right"></i> Aims for</a></li>
+              <li><a href="#"><i class="fas fa-arrow-right"></i> Reminders</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact Us</h4>
+            <ul>
+              <li><a href="#"><i class="fas fa-map"></i> Madhya Pradesh</a></li>
+              <li><a href="#"><i class="fas fa-envelope"></i> Codesurfers1@gmail.com</a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="small">
+          <p>Created by Code Surfers| All rights reserved!</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+  <script src="js/script2.js"></script>
+
+  <script type="text/javascript">
+    var counter = 1;
+    setInterval(function () {
+      document.getElementById('radio' + counter).checked = true;
+      counter++;
+      if (counter > 4) {
+        counter = 1;
+      }
+    }, 5000);
+  </script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
